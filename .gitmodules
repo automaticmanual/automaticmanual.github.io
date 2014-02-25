@@ -1,3 +1,12 @@
 [submodule "bacon"]
   path = include/bacon
   url = https://github.com/automaticmanual/Bacon
+[submodule "microvent"]
+  path = include/microvent
+  url = https://github.com/automaticmanual/Microvent
+[submodule "Gizmo"]
+  path = include/gizmo
+  url = https://github.com/automaticmanual/Gizmo
+[submodule "ronald"]
+  path = include/ronald
+  url = https://github.com/automaticmanual/Ronald
