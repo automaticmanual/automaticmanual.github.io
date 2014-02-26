@@ -1,9 +1,137 @@
+<!DOCTYPE html>
 <html>
-<head>
-  <meta charset="UTF-8">
-  <title>Document</title>
-</head>
-<body>
-  <h1>automaticmanual.github.io</h1>
-</body>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Editor : editor" />
+    
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/demo.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/header.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/scroller.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/buttons.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/decorate.css">
+    <script src="javascripts/modernizr-latest.js"></script>
+
+    <title>Automan</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <!-- header -->
+      <div class="cbp-af-header">
+        <div class="cbp-af-inner">
+          <h1><small>Automatic<sup>Manual</sup></small></h1>
+          <nav>
+            <a class='navbutton' href="#bacon">Bacon</a>
+            <a class='navbutton' href="#microvent">Microvent</a>
+            <a class='navbutton' href="#gizmo">Gizmo</a>
+            <a class='navbutton' href="#ronald">Ronald</a>
+          </nav>
+        </div>
+      </div>
+      
+      <div class="divblocks">
+        <!-- scrolling divs -->
+        <section id="linernotes" class="cbp-so-section">
+            <article>
+              <h2>Open Source at Automatic<span>Manual</span></h2>
+              <p>These are some of the tools we are working on to facilitate better and quicker development of online instruction.</p>
+            </article>
+        </section>
+        <div id="cbp-so-scroller" class="cbp-so-scroller">
+          <section id="bacon" class="cbp-so-section">
+              <article class="cbp-so-side cbp-so-side-left">
+                  <h3>Bacon</h3>
+                  <p>A tiny extension that allows capturing and reporting of uncaught javascript exceptions in your webapp.</p>
+                  <p>
+                    <nav class="cl-effect-3">
+                      <a href="http://automaticmanual.github.io/Bacon/">Webpage</a>
+                      <a href="https://github.com/automaticmanual/Bacon">GitHub</a>
+                    </nav>
+                  </p>
+              </article>
+              <figure class="cbp-so-side cbp-so-side-right">
+                  <img src="images/bacon.png" alt="img01">
+              </figure>
+          </section>
+          <section id="microvent" class="cbp-so-section">
+              <figure class="cbp-so-side cbp-so-side-left">
+                  <img src="images/microvent.png" alt="img01">
+              </figure>
+              <article class="cbp-so-side cbp-so-side-right">
+                  <h3>Microvent</h3>
+                  <p>A tiny easy to use and super extendable event driver.</p>
+                  <p>
+                    <nav class="cl-effect-3">
+                      <a href="http://automaticmanual.github.io/Microvent/">Webpage</a>
+                      <a href="https://github.com/automaticmanual/Microvent">GitHub</a>
+                    </nav>
+                  </p>
+              </article>
+          </section>
+          <section id="gizmo" class="cbp-so-section">
+              <article class="cbp-so-side cbp-so-side-left">
+                  <h3>Gizmo</h3>
+                  <p>A tiny object library that allows for quick and easy extension and creation of objects.</p>
+                  <p>
+                    <nav class="cl-effect-3">
+                      <a href="http://automaticmanual.github.io/Gizmo/">Webpage</a>
+                      <a href="https://github.com/automaticmanual/Gizmo">GitHub</a>
+                    </nav>
+                  </p>
+              </article>
+              <figure class="cbp-so-side cbp-so-side-right">
+                  <img src="images/gizmo.png" alt="img01">
+              </figure>
+          </section>
+          <section id="ronald" class="cbp-so-section">
+              <figure class="cbp-so-side cbp-so-side-left">
+                  <img src="images/ronald.png" alt="img01">
+              </figure>
+              <article class="cbp-so-side cbp-so-side-right">
+                  <h3>Ronald</h3>
+                  <p>A tiny and convenient abstraction utility for your databases.</p>
+                  <p>
+                    <nav class="cl-effect-3">
+                      <a href="http://automaticmanual.github.io/Ronald/">Webpage</a>
+                      <a href="https://github.com/automaticmanual/Ronald">GitHub</a>
+                    </nav>
+                  </p>
+              </article>
+          </section>
+        </div>
+      </div>
+    </div>
+    
+    <script src="javascripts/classie.js"></script>
+    <script src="javascripts/cpb_animatedHeader.js"></script>
+    <script src="javascripts/cpb_scroller.js"></script>
+    <script>
+      new cbpScroller( document.getElementById( 'cbp-so-scroller' ) );
+
+      var addScrollers = function () {
+        var navbuttons = document.getElementsByClassName('navbutton');
+        window.navbuttons = navbuttons;
+        for (var i=0; i < navbuttons.length; i++) {
+          var button = navbuttons.item(i);
+          button.addEventListener('click', function (e) {
+            e.preventDefault();
+            scroll(this.innerText.toLowerCase());
+          });
+        }
+      };
+
+      var scroll = function (elementId) {
+        var el = document.getElementById(elementId);
+        var top = el.offsetTop - 230;
+        var scrolltop;
+        scrolltop = (top > 300) ? 90 : 230;
+        window.scrollTo(el.offsetLeft, el.offsetTop - scrolltop);
+      }
+
+      addScrollers();
+    </script>
+
+  </body>
 </html>

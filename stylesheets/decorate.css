@@ -1,0 +1,56 @@
+body {
+  background-image: url('../images/vert.png');
+  background-repeat: repeat-x;
+  background-color: #2980B9;
+}
+
+.divblocks {
+  margin-top: 230px;
+}
+
+#linernotes.cbp-so-section {
+  margin: 2em 4em;
+}
+
+#linernotes.cbp-so-section h2{
+  display: block;
+  text-align: center;
+}
+
+.cbp-so-section {
+  margin-bottom: 5em;
+}
+
+.cbp-af-header {
+  background: #ECF0F1;
+}
+
+.cbp-af-header h1 {
+  font-size: 2em;
+  color: #2C3E50;
+}
+
+.cbp-af-header nav a {
+  color: #2C3E50;
+}
+
+.cbp-af-header nav a:hover {
+  color: #3498DB;
+}
+
+.cbp-so-section h2 {
+  font-size: 4em;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.cbp-so-section h3 {
+  font-size: 3em;
+  font-weight: 500;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.cl-effect-3 a:hover {
+  color: #2C3E50;
+}
